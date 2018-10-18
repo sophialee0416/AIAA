@@ -3,12 +3,102 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignTop="@+id/textView4"
+        android:layout_marginTop="-10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText2"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_marginTop="-10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="150dp"
+        android:text="Ion Species (amu)" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_marginTop="114dp"
+        android:text="Magnetic Field" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/title_calculator"
+        android:text="NRL Formulary Calculator"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginTop="77dp"
+        android:text="Plasma Density" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="41dp"
+        android:text="Electron Temperature" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editText3"
+        android:layout_alignTop="@+id/textView2"
+        android:layout_marginTop="-10dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="94dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="-71dp"
+        android:layout_marginEnd="39dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_centerVertical="true"
+        android:text="Output:"
+        android:textSize="18sp" />
 
 </RelativeLayout>
