@@ -38,7 +38,7 @@ class RSSFeedFragment : Fragment() {
         val recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
 
         // 2. set layoutManger
-        recyclerView.layoutManager = LinearLayoutManager(activity)
+        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
 
         // this is data fro recycler view
 
@@ -68,6 +68,13 @@ class RSSFeedFragment : Fragment() {
         link = Card()
         link.title = "Article Three";
         link.content ="Content Three";
+//        link.url = "hmkcode.com";
+
+        links.add(link)
+
+        link = Card()
+        link.title = "Article Four";
+        link.content ="Content Four";
 //        link.url = "hmkcode.com";
 
         links.add(link)
