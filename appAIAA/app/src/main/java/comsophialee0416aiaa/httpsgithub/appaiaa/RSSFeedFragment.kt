@@ -7,12 +7,9 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import java.io.File
-import java.io.FileOutputStream
-import java.io.InputStream
-import java.net.HttpURLConnection
-import java.net.URL
 import java.util.*
+import com.prof.rssparser.Article;
+import com.prof.rssparser.Parser;
 
 
 //1
@@ -25,10 +22,6 @@ class RSSFeedFragment : Fragment() {
         }
     }
 
-//    private lateinit var recyclerView: RecyclerView
-//    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-//    private lateinit var viewManager: RecyclerView.LayoutManager
-
 
     //3
     override fun onCreateView(inflater: LayoutInflater,
@@ -37,73 +30,35 @@ class RSSFeedFragment : Fragment() {
 
         var rootView = inflater?.inflate(R.layout.fragment_rssfeed, container, false)
 
-        //1. Get a reference to recyclerView
-        val recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
+        //url of RSS feed
+        val urlString = "https://www.aiaa.org/IndustryNewsRss.aspx"
+        val parser = Parser()
+        parser.execute(urlString)
+        parser.onFinish(object : Parser.OnTaskCompleted {
 
-        // 2. set layoutManger
-        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            override fun onTaskCompleted(list: ArrayList<Article>) {
+                //what to do when the parsing is done
+                //the Array List contains all article's data. For example you can use it for your adapter.
 
-        // this is data fro recycler view
+                //1. Get a reference to recyclerView
+                val recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
 
-        val adapter:RecyclerView.Adapter<MyAdapter.MyViewHolder> = MyAdapter(getListData())
-        recyclerView.adapter = adapter;
+                // 2. set layoutManger
+                recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+
+                // this is data fro recycler view
+                val adapter:RecyclerView.Adapter<MyAdapter.MyViewHolder> = MyAdapter(list)
+                recyclerView.adapter = adapter
+            }
+
+            override fun onError() {
+                //what to do in case of error
+            }
+        })
 
         return rootView
     }
 
-    private fun getListData(): List<Card> {
 
-        val links = LinkedList<Card>()
-
-        var link = Card("Article One", "Content One", "https://www.google.com/", Date(2018, 10, 31), "guid1")
-        links.add(link)
-
-        link = Card("Article Two", "Content Two", "https://www.google.com/", Date(2018, 10, 31), "guid2")
-        links.add(link)
-
-        link = Card("Article Three", "Content Three", "https://www.google.com/", Date(2018, 10, 31), "guid3")
-        links.add(link)
-
-        link = Card("Article Four", "Content Four", "https://www.google.com/", Date(2018, 10, 31), "guid4")
-        links.add(link)
-
-        return links
-    }
-
-    private fun getXml(urlStr: String): File {
-        var url = URL(urlStr)
-        var urlConnection = url.openConnection() as HttpURLConnection
-        urlConnection.requestMethod = "GET"
-        urlConnection.doOutput = true
-        urlConnection.connect()
-
-        var file = File("/", "urlstuff.txt")
-
-        var fileOutput = FileOutputStream(file)
-
-        var inputStream = urlConnection.inputStream
-
-        var buffer = ByteArray(1024)
-
-        var totalSize = urlConnection.contentLength
-
-        var downloadSize = 0
-
-        var bufferLength = inputStream.read(buffer)
-
-        while(bufferLength > 0) {
-            fileOutput.write(buffer, 0, bufferLength)
-
-            downloadSize += bufferLength
-
-            var progress = ((downloadSize * 100) / totalSize) as Integer
-
-            bufferLength = inputStream.read(buffer)
-        }
-
-        fileOutput.close()
-
-        return file
-    }
 
 }
