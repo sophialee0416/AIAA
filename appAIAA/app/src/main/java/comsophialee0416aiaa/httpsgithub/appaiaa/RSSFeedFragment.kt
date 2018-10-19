@@ -2,18 +2,18 @@ package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import java.util.*
+import com.prof.rssparser.Article;
+import com.prof.rssparser.Parser;
 
 
 //1
 class RSSFeedFragment : Fragment() {
-
     //2
     companion object {
 
@@ -21,10 +21,6 @@ class RSSFeedFragment : Fragment() {
             return RSSFeedFragment()
         }
     }
-
-//    private lateinit var recyclerView: RecyclerView
-//    private lateinit var viewAdapter: RecyclerView.Adapter<*>
-//    private lateinit var viewManager: RecyclerView.LayoutManager
 
 
     //3
@@ -34,51 +30,35 @@ class RSSFeedFragment : Fragment() {
 
         var rootView = inflater?.inflate(R.layout.fragment_rssfeed, container, false)
 
-        //1. Get a reference to recyclerView
-        val recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
+        //url of RSS feed
+        val urlString = "https://www.aiaa.org/IndustryNewsRss.aspx"
+        val parser = Parser()
+        parser.execute(urlString)
+        parser.onFinish(object : Parser.OnTaskCompleted {
 
-        // 2. set layoutManger
-        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+            override fun onTaskCompleted(list: ArrayList<Article>) {
+                //what to do when the parsing is done
+                //the Array List contains all article's data. For example you can use it for your adapter.
 
-        // this is data fro recycler view
+                //1. Get a reference to recyclerView
+                val recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
 
-        val adapter:RecyclerView.Adapter<MyAdapter.MyViewHolder> = MyAdapter(getListData())
-        recyclerView.adapter = adapter;
+                // 2. set layoutManger
+                recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+
+                // this is data fro recycler view
+                val adapter:RecyclerView.Adapter<MyAdapter.MyViewHolder> = MyAdapter(list)
+                recyclerView.adapter = adapter
+            }
+
+            override fun onError() {
+                //what to do in case of error
+            }
+        })
 
         return rootView
     }
 
-    private fun getListData(): List<Card> {
-        val links = LinkedList<Card>()
 
-        var link = Card()
-        link.title = "Article One";
-        link.content ="Content One";
-//        link.url = "hmkcode.com";
-
-        links.add(link)
-
-        link = Card()
-        link.title = "Article Two";
-        link.content ="Content Two";
-//        link.url = "hmkcode.com";
-
-        links.add(link)
-
-        link = Card()
-        link.title = "Article Three";
-        link.content ="Content Three";
-//        link.url = "hmkcode.com";
-
-        links.add(link)
-
-        link = Card()
-        link.title = "Article Four";
-        link.content ="Content Four";
-//        link.url = "hmkcode.com";
-
-        links.add(link)
-        return links
-    }
 
 }

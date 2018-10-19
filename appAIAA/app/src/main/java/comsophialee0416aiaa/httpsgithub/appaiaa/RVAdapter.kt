@@ -1,13 +1,15 @@
 package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.support.v7.widget.RecyclerView;
+import android.text.Html
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import com.prof.rssparser.Article
 
-class MyAdapter(private val links:List<Card>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             MyViewHolder {
@@ -21,12 +23,12 @@ class MyAdapter(private val links:List<Card>): RecyclerView.Adapter<MyAdapter.My
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.cardTitle.text = links[position].title
-        holder.cardContent.text = links[position].content
+        holder.cardContent.text = Html.fromHtml(links[position].description)
         //holder.itemUrl.text = links[position].url
     }
 
     override fun getItemCount(): Int {
-        return links?.size ?: 0
+        return links.size
     }
 
     class MyViewHolder(itemLayoutView: View)
