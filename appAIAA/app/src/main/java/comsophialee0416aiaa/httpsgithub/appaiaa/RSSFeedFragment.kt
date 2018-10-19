@@ -38,7 +38,7 @@ class RSSFeedFragment : Fragment() {
         val recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
 
         // 2. set layoutManger
-        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
         // this is data fro recycler view
 
