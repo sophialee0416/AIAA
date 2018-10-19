@@ -21,12 +21,12 @@ class MyAdapter(private val links:List<Card>): RecyclerView.Adapter<MyAdapter.My
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.cardTitle.text = links[position].title
-        holder.cardContent.text = links[position].content
+        holder.cardContent.text = links[position].description
         //holder.itemUrl.text = links[position].url
     }
 
     override fun getItemCount(): Int {
-        return links?.size ?: 0
+        return links.size
     }
 
     class MyViewHolder(itemLayoutView: View)
