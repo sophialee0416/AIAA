@@ -2,7 +2,6 @@ package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.support.v7.widget.DefaultItemAnimator
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
@@ -51,33 +50,18 @@ class RSSFeedFragment : Fragment() {
     private fun getListData(): List<Card> {
         val links = LinkedList<Card>()
 
-        var link = Card()
-        link.title = "Article One";
-        link.content ="Content One";
-//        link.url = "hmkcode.com";
-
+        var link = Card("Article One", "Content One", "https://www.google.com/", Date(2018, 10, 31), "guid1")
         links.add(link)
 
-        link = Card()
-        link.title = "Article Two";
-        link.content ="Content Two";
-//        link.url = "hmkcode.com";
-
+        link = Card("Article Two", "Content Two", "https://www.google.com/", Date(2018, 10, 31), "guid2")
         links.add(link)
 
-        link = Card()
-        link.title = "Article Three";
-        link.content ="Content Three";
-//        link.url = "hmkcode.com";
-
+        link = Card("Article Three", "Content Three", "https://www.google.com/", Date(2018, 10, 31), "guid3")
         links.add(link)
 
-        link = Card()
-        link.title = "Article Four";
-        link.content ="Content Four";
-//        link.url = "hmkcode.com";
-
+        link = Card("Article Four", "Content Four", "https://www.google.com/", Date(2018, 10, 31), "guid4")
         links.add(link)
+
         return links
     }
 
