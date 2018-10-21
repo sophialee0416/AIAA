@@ -34,7 +34,7 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
                 var url = links[linksToMap[itemLayoutView.card_Title.text] as Int].link
                 Log.i("howdy", url)
                 val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-//                startActivity(browserIntent)
+                parent.context.startActivity(browserIntent)
             }
         })
 
