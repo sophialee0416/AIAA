@@ -28,10 +28,10 @@ class RSSFeedFragment : Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        var rootView = inflater?.inflate(R.layout.fragment_rssfeed, container, false)
+        val rootView = inflater?.inflate(R.layout.fragment_rssfeed, container, false)
 
         //url of RSS feed
-        val urlString = "http://feeds.feedburner.com/AvionicsInternationalShowDaily?format=xml"
+        val urlString = "https://www.aiaa.org/IndustryNewsRss.aspx"
         val parser = Parser()
         parser.execute(urlString)
         parser.onFinish(object : Parser.OnTaskCompleted {
