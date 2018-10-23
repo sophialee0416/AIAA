@@ -1,21 +1,17 @@
 package comsophialee0416aiaa.httpsgithub.appaiaa
 
+import android.annotation.SuppressLint
 import android.support.v7.widget.RecyclerView;
 import android.text.Html
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 import com.prof.rssparser.Article
-import android.widget.Toast
-import android.support.v4.content.ContextCompat.startActivity
 import android.content.Intent
 import android.net.Uri
 import kotlinx.android.synthetic.main.rssfeed_cards.view.*
-import android.support.v4.content.ContextCompat.startActivity
 import org.jsoup.Jsoup
-import android.app.ProgressDialog
 import android.os.AsyncTask
 import android.util.Log
 import java.io.IOException
@@ -23,7 +19,6 @@ import java.io.IOException
 class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     var linksToMap: HashMap<String, Int> = hashMapOf()
-    var currentTitle = ""
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             MyViewHolder {
@@ -44,17 +39,12 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
     }
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
-        currentTitle = links[position].title
-        linksToMap[currentTitle] = position
-        holder.cardTitle.text = currentTitle
+        linksToMap[links[position].title] = position
+        holder.cardTitle.text = links[position].title
         holder.cardContent.text = Html.fromHtml(links[position].description)
-        if(null == links[position].image) {
-            GetImageLink().execute()
-        }
-        else {
-            Log.i("hello", "covered already")
-        }
-//        holder.itemUrl.text = links[position].url
+        val task = GetImageLink()
+        task.title = links[position].title
+        task.execute()
 
     }
 
@@ -71,29 +61,42 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
 
     }
 
+    @SuppressLint("StaticFieldLeak")
     private inner class GetImageLink : AsyncTask<Void, Void, Void>() {
 
-        override fun doInBackground(vararg params : Void): Void? {
-            try {
-                val document = Jsoup.connect(links[linksToMap[currentTitle] as Int].link).get()
-                if(document != null) {
-                    val imageDiv = document.select("#ctl00_ContentPlaceHolder1_ContentBlock2 font a")
-                    if(imageDiv != null) {
-                        val imageFirst = imageDiv.first()
-                                if(imageFirst != null) {
-                                    val imageLink = imageFirst.attr("href")
-                                    if(imageLink != null) {
-                                        links[linksToMap[currentTitle] as Int].image = imageLink
-                                        Log.i("hello", links[linksToMap[currentTitle] as Int].image)
-                                    }
-                                }
-                    }
-                }
-            } catch (e: IOException) {
-                e.printStackTrace()
-            }
+        var title : String = ""
 
+        override fun doInBackground(vararg params : Void): Void? {
+            if(null == links[linksToMap[title] as Int].image) {
+                try {
+                    val document = Jsoup.connect(links[linksToMap[title] as Int].link).get()
+                    links[linksToMap[title] as Int].image = getActualImage(document?.select("#ctl00_ContentPlaceHolder1_ContentBlock2 font a")?.first()?.attr("href"))
+//                    Log.i("hello", "howdy " + links[linksToMap[title] as Int].image)
+                } catch (e: IOException) {
+                    e.printStackTrace()
+                }
+            }
             return null
+        }
+
+        fun getActualImage(imageLink : String?) : String? {
+            if(imageLink == null) {
+                return null
+            }
+            val invalid : Boolean = "/uploadedImages/Industry_News/" == imageLink.substring(0, 30)
+            || "http://archive" == imageLink.substring(0,14)
+            || "https://aerospaceamerica" == imageLink.substring(0,24)
+            || "https://www.space.com" == imageLink.substring(0, 21)
+            || "https://www.orbitalatk.com" == imageLink.substring(0,26)
+            || "https://www.dropbox.com/" == imageLink.substring(0, 24)
+
+            if(invalid) {
+                return null
+            }
+            else if("https://commons.wikimedia.org" == imageLink.substring(0,29)) {
+                return Jsoup.connect(imageLink).get()?.select("fullImageLink a")?.attr("href")
+            }
+            return imageLink
         }
     }
 }
