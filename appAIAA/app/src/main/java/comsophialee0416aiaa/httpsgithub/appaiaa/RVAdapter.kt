@@ -10,16 +10,23 @@ import android.view.ViewGroup
 import android.widget.TextView
 import com.prof.rssparser.Article
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.Uri
 import kotlinx.android.synthetic.main.rssfeed_cards.view.*
 import org.jsoup.Jsoup
 import android.os.AsyncTask
+import android.widget.ImageView
 import java.io.IOException
+import android.graphics.BitmapFactory
+import java.io.InputStream
+import java.net.MalformedURLException
+
 
 class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     var linksToMap: HashMap<String, Int> = hashMapOf()
 
+    @SuppressLint("InflateParams")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             MyViewHolder {
 
@@ -41,7 +48,7 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
         linksToMap[links[position].title] = position
         holder.cardTitle.text = links[position].title
         holder.cardContent.text = Html.fromHtml(links[position].description)
-        val task = GetImageLink()
+        val task = GetImageLink(holder.cardImage)
         task.title = links[position].title
         task.execute()
     }
@@ -53,28 +60,47 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
     class MyViewHolder(itemLayoutView: View)
         : RecyclerView.ViewHolder(itemLayoutView) {
 
-        val cardTitle = itemLayoutView.findViewById<TextView>(R.id.card_Title)
-        val cardContent = itemLayoutView.findViewById<TextView>(R.id.card_content)
-        //val itemUrl = itemLayoutView.findViewById<TextView>(R.id.item_url)
+        val cardTitle = itemLayoutView.findViewById<TextView>(R.id.card_Title)!!
+        val cardContent = itemLayoutView.findViewById<TextView>(R.id.card_content)!!
+        val cardImage = itemLayoutView.findViewById<ImageView>(R.id.card_image)!!
 
     }
 
     @SuppressLint("StaticFieldLeak")
-    private inner class GetImageLink : AsyncTask<Void, Void, Void>() {
+    private inner class GetImageLink(val image: ImageView) : AsyncTask<Void, Void, Bitmap>() {
 
         var title : String = ""
 
-        override fun doInBackground(vararg params : Void): Void? {
+        override fun doInBackground(vararg params : Void): Bitmap? {
+            var bmp : Bitmap? = null
             if(null == links[linksToMap[title] as Int].image) {
                 try {
                     val document = Jsoup.connect(links[linksToMap[title] as Int].link).get()
                     links[linksToMap[title] as Int].image = getActualImage(document?.select("#ctl00_ContentPlaceHolder1_ContentBlock2 font a")?.first()?.attr("href"))
-//                    Log.i("hello", "howdy " + links[linksToMap[title] as Int].image)
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
             }
-            return null
+//            if(null != links[linksToMap[title] as Int].image) {
+//                Log.i("greetings", links[linksToMap[title] as Int].image)
+//                holder?.cardImage?.setImageDrawable(loadImageFromWebOperations(links[linksToMap[title] as Int].image))
+//            }
+            if(null != links[linksToMap[title] as Int].image) {
+                var `in` : InputStream? = null
+                try {
+                    `in` = java.net.URL(links[linksToMap[title] as Int].image).openStream()
+                    bmp = BitmapFactory.decodeStream(`in`)
+                } catch (e: MalformedURLException) {
+                    e.printStackTrace()
+                }
+            }
+            return bmp
+        }
+
+        override fun onPostExecute(result: Bitmap?) {
+            if(null != result) {
+                image.setImageBitmap(result)
+            }
         }
 
         fun getActualImage(imageLink : String?) : String? {
