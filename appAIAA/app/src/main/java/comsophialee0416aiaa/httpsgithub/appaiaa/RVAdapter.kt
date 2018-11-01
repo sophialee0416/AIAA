@@ -1,19 +1,19 @@
 package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.annotation.SuppressLint
-import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.RecyclerView
 import android.text.Html
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
+import android.util.Log
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.TextView
 import com.prof.rssparser.Article
 import android.content.Intent
 import android.net.Uri
 import kotlinx.android.synthetic.main.rssfeed_cards.view.*
 import org.jsoup.Jsoup
 import android.os.AsyncTask
-import android.util.Log
 import java.io.IOException
 
 class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
@@ -26,13 +26,12 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
         val itemLayoutView:View =  LayoutInflater.from(parent.context)
                 .inflate(R.layout.rssfeed_cards, null)
 
-        itemLayoutView.setOnClickListener(object : View.OnClickListener {
-            override fun onClick(p0: View?) {
-                var url = links[linksToMap[itemLayoutView.card_Title.text] as Int].link
-                val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
-                parent.context.startActivity(browserIntent)
-            }
-        })
+        itemLayoutView.setOnClickListener {
+            val url = links[linksToMap[itemLayoutView.card_Title.text] as Int].link
+            Log.i("howdy", url)
+            val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            parent.context.startActivity(browserIntent)
+        }
 
         return MyViewHolder(itemLayoutView)
 
@@ -45,7 +44,6 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
         val task = GetImageLink()
         task.title = links[position].title
         task.execute()
-
     }
 
     override fun getItemCount(): Int {
