@@ -86,13 +86,16 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
 //                holder?.cardImage?.setImageDrawable(loadImageFromWebOperations(links[linksToMap[title] as Int].image))
 //            }
             if(null != links[linksToMap[title] as Int].image) {
-                var `in` : InputStream? = null
+                val `in` : InputStream?
                 try {
                     `in` = java.net.URL(links[linksToMap[title] as Int].image).openStream()
                     bmp = BitmapFactory.decodeStream(`in`)
                 } catch (e: MalformedURLException) {
                     e.printStackTrace()
                 }
+            }
+            if(bmp != null) {
+                Log.i("bmp", "\n" + title + "\n" + links[linksToMap[title] as Int].image)
             }
             return bmp
         }
