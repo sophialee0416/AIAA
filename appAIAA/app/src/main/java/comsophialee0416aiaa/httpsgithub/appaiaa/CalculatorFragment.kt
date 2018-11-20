@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
+
+
 //1
 class CalculatorFragment : Fragment() {
 
@@ -16,15 +18,10 @@ class CalculatorFragment : Fragment() {
             return CalculatorFragment()
         }
     }
-
+    //3
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater?.inflate(R.layout.fragment_calculator, container, false)
     }
 
-    //3
-//    override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?,
-//                              savedInstanceState: Bundle?): View? {
-//        return inflater?.inflate(R.layout.fragment_calculator, container, false)
-//    }
 
 }
