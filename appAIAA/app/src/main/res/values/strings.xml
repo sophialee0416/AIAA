@@ -3,6 +3,9 @@
     <string name="title_rssfeed">RSS</string>
     <string name="title_calculator">Calculator</string>
     <string name="title_videos">Videos</string>
+    <string name="sample_title">Sample title</string>
+    <string name="sample_description_of_aiaa_article">Sample description of AIAA article</string>
+    <string name="todo">TODO</string>
     <string name="basic_thruster_physics">Basic Thruster Physics</string>
     <string name="thrust_n">Thrust (N)</string>
     <string name="isp_s">Isp (s)</string>

@@ -20,27 +20,6 @@ class CalculatorFragment : Fragment() {
         }
     }
 
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//
-//        //Button OnClick Listener
-//        calculate_button.setOnClickListener {
-//            var input: Double = thrust_text.text.toString().toDouble()
-//            var output: Double = massFlow(input);
-////            //Reading the "yearInput" EditText view value
-////            var year: String = yearInput.text.toString().trim();
-////            if (year == "") {
-////
-////                result.text = "InValid Input"
-////
-////            } else {
-////                var output: String = massFlow(year);
-////                //Updating the text of "result" TextView
-////                result.text = output;
-////            }
-//        }
-//    }
-
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
 
         var view: View = inflater.inflate(R.layout.fragment_calculator, container, false)

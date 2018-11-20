@@ -22,5 +22,4 @@ class VideosFragment : Fragment() {
         return inflater?.inflate(R.layout.fragment_videos, container, false)
     }
 
-
 }

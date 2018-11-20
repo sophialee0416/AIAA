@@ -26,7 +26,7 @@ class RSSFeedFragment : Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-        val rootView = inflater?.inflate(R.layout.fragment_rssfeed, container, false)
+        val rootView = inflater.inflate(R.layout.fragment_rssfeed, container, false)
 
         //url of RSS feed
         val urlString = "https://www.aiaa.org/IndustryNewsRss.aspx"
