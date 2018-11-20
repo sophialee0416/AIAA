@@ -3,24 +3,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/title_rssfeed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="@string/title_rssfeed"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+    <!--<TextView-->
+        <!--android:id="@+id/title_rssfeed"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="10dp"-->
+        <!--android:text="@string/title_rssfeed"-->
+        <!--android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />-->
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_rssfeed"
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:orientation="vertical"/>
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_rssfeed"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

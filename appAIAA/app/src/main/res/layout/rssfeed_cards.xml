@@ -55,5 +55,4 @@
             android:src="@mipmap/ic_launcher"
             android:contentDescription="@string/todo" />
     </LinearLayout>
-
 </android.support.v7.widget.CardView>

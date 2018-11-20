@@ -8,8 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import java.util.*
-import com.prof.rssparser.Article;
-import com.prof.rssparser.Parser;
+import com.prof.rssparser.Article
+import com.prof.rssparser.Parser
 
 
 //1
@@ -21,8 +21,6 @@ class RSSFeedFragment : Fragment() {
             return RSSFeedFragment()
         }
     }
-
-
     //3
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -55,10 +53,7 @@ class RSSFeedFragment : Fragment() {
                 //what to do in case of error
             }
         })
-
         return rootView
     }
-
-
 
 }
