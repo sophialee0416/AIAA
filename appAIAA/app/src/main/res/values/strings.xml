@@ -10,11 +10,12 @@
     <string name="s_c_mass_kg">S/c Mass (kg)</string>
     <string name="propellant_utilization">Propellant Utilization</string>
     <string name="burn_duration_days">Burn Duration (Days)</string>
-    <string name="output">Calculate</string>
+    <string name="calculate">Calculate</string>
     <string name="mass_flow_kg_s">Mass Flow (kg/s)</string>
     <string name="mass_flow_g_month">Mass Flow (g/month)</string>
     <string name="anode_efficiency">Anode Efficiency</string>
     <string name="burn_duration_s">Burn Duration (s)</string>
     <string name="acceleration_m_s_2">Acceleration (m/s^2)</string>
     <string name="approx_impulse_m_s">Approx. Impulse (m/s)</string>
+    <string name="mass_used_kg">Mass Used (kg)</string>
 </resources>

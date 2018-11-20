@@ -88,10 +88,10 @@
                 android:layout_width="143dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="50dp"
                 android:layout_marginEnd="35dp"
+                android:layout_marginTop="50dp"
                 android:ems="10"
-                android:inputType="numberDecimal" />
+                android:inputType="numberSigned|numberDecimal" />
 
             <EditText
                 android:id="@+id/isp_text"
@@ -149,13 +149,15 @@
                 android:inputType="numberDecimal" />
 
             <Button
-                android:id="@+id/output_button"
+                android:id="@+id/calculate_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/burndays"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="25dp"
+                android:padding="13dp"
                 android:layout_centerHorizontal="true"
-                android:text="@string/output" />
+                android:textSize="24dp"
+                android:text="@string/calculate" />
 
             <TextView
                 android:id="@+id/flowkg"
@@ -163,8 +165,8 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
-                android:layout_below="@id/output_button"
+                android:layout_marginTop="29dp"
+                android:layout_below="@id/calculate_button"
                 android:text="@string/mass_flow_kg_s"
                 android:textSize="18sp" />
 
@@ -174,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="26dp"
                 android:layout_below="@id/flowkg"
                 android:text="@string/mass_flow_g_month"
                 android:textSize="18sp" />
@@ -185,7 +187,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="26dp"
                 android:layout_below="@id/flowg"
                 android:text="@string/anode_efficiency"
                 android:textSize="18sp" />
@@ -196,7 +198,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="26dp"
                 android:layout_below="@id/anode"
                 android:text="@string/burn_duration_s"
                 android:textSize="18sp" />
@@ -207,7 +209,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="26dp"
                 android:layout_below="@id/burnsec"
                 android:text="@string/acceleration_m_s_2"
                 android:textSize="18sp" />
@@ -218,7 +220,7 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="26dp"
                 android:layout_below="@id/acceleration"
                 android:text="@string/approx_impulse_m_s"
                 android:textSize="18sp" />
@@ -229,10 +231,10 @@
                 android:layout_height="wrap_content"
                 android:layout_toStartOf="@id/thrust_text"
                 android:layout_alignEnd="@+id/thrust"
-                android:layout_marginTop="25dp"
+                android:layout_marginTop="26dp"
                 android:layout_below="@id/impulse"
-                android:layout_marginBottom="64dp"
-                android:text="Mass Used (kg)"
+                android:layout_marginBottom="70dp"
+                android:text="@string/mass_used_kg"
                 android:textSize="18sp" />
 
             <TextView
@@ -240,8 +242,8 @@
                 android:layout_width="143dp"
                 android:layout_height="49dp"
                 android:layout_marginEnd="35dp"
-                android:layout_marginTop="12dp"
-                android:layout_below="@id/output_button"
+                android:layout_marginTop="17dp"
+                android:layout_below="@id/calculate_button"
                 android:layout_alignStart="@+id/thrust_text"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
@@ -250,7 +252,7 @@
                 android:layout_width="143dp"
                 android:layout_height="49dp"
                 android:layout_marginEnd="35dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="2dp"
                 android:layout_below="@id/flowkg_value"
                 android:layout_alignStart="@+id/thrust_text"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
@@ -260,10 +262,51 @@
                 android:layout_width="143dp"
                 android:layout_height="49dp"
                 android:layout_marginEnd="35dp"
-                android:layout_marginTop="3dp"
+                android:layout_marginTop="2dp"
                 android:layout_below="@id/flowg_value"
                 android:layout_alignStart="@+id/thrust_text"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/burnsec_value"
+                android:layout_width="143dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/anode_value"
+                android:layout_alignStart="@+id/thrust_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/acceleration_value"
+                android:layout_width="143dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/burnsec_value"
+                android:layout_alignStart="@+id/thrust_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/impulse_value"
+                android:layout_width="143dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/acceleration_value"
+                android:layout_alignStart="@+id/thrust_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+            <TextView
+                android:id="@+id/massused_value"
+                android:layout_width="143dp"
+                android:layout_height="49dp"
+                android:layout_marginEnd="35dp"
+                android:layout_marginTop="2dp"
+                android:layout_below="@id/impulse_value"
+                android:layout_alignStart="@+id/thrust_text"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
 
         </RelativeLayout>
     </LinearLayout>
