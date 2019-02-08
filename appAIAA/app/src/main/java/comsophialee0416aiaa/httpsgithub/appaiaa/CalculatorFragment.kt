@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import kotlinx.android.synthetic.main.fragment_calculator.*
 
+// cards of formulas, same with videos
 
 class CalculatorFragment : Fragment() {
 
