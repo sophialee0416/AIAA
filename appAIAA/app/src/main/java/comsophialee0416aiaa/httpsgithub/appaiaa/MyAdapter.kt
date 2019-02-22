@@ -80,10 +80,6 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
                     e.printStackTrace()
                 }
             }
-//            if(null != links[linksToMap[title] as Int].image) {
-//                Log.i("greetings", links[linksToMap[title] as Int].image)
-//                holder?.cardImage?.setImageDrawable(loadImageFromWebOperations(links[linksToMap[title] as Int].image))
-//            }
             if(null != links[linksToMap[title] as Int].image) {
                 val `in` : InputStream?
                 try {

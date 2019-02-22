@@ -20,15 +20,18 @@ import android.widget.Toast
 class RSSFeedFragment : Fragment() {
     var articleList:ArrayList<Article> = arrayListOf()
     var partialList:ArrayList<Article> = arrayListOf()
+
     lateinit var recyclerView:RecyclerView
     lateinit var adapter:RecyclerView.Adapter<MyAdapter.MyViewHolder>
     lateinit var bottomLayout:RelativeLayout
+    var linearLayoutManager: LinearLayoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+
     // variables for scroll listener
     private var userScrolled = true
     var pastVisibleItems:Int = 0
     var visibleItemCount:Int = 0
     var totalItemCount:Int = 0
-    var imagesPerLoad:Int = 10
+    private var imagesPerLoad:Int = 10
 
     //2
     companion object {
@@ -47,7 +50,7 @@ class RSSFeedFragment : Fragment() {
         recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
 
         // 2. set layoutManger
-        recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        recyclerView.layoutManager = linearLayoutManager
 
         bottomLayout = rootView.findViewById(R.id.loadItemsLayout_recyclerView) as RelativeLayout
 
@@ -69,7 +72,7 @@ class RSSFeedFragment : Fragment() {
 
                 Log.i("howdy", "howdy");
 
-//                implementScrollListener()
+                implementScrollListener()
             }
 
             override fun onError() {
@@ -102,10 +105,11 @@ class RSSFeedFragment : Fragment() {
                 // Here get the child count, item count and visibleitems
                 // from layout manager
 
-                visibleItemCount = LinearLayoutManager(activity).childCount
-                totalItemCount = LinearLayoutManager(activity).itemCount
-                pastVisibleItems = LinearLayoutManager(activity).findFirstVisibleItemPosition()
+                visibleItemCount = linearLayoutManager.childCount
+                totalItemCount = linearLayoutManager.itemCount
+                pastVisibleItems = linearLayoutManager.findFirstVisibleItemPosition()
 
+                Log.i("onScrolled", "$visibleItemCount, $pastVisibleItems, $totalItemCount")
                 // Now check if userScrolled is true and also check if
                 // the item is end then update recycler view and set
                 // userScrolled to false
