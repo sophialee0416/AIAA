@@ -26,7 +26,6 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
 
     var linksToMap: HashMap<String, Int> = hashMapOf()
 
-    @SuppressLint("InflateParams")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             MyViewHolder {
 
