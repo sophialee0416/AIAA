@@ -18,6 +18,13 @@
             android:orientation="vertical"
             android:paddingBottom="10dp"
             android:paddingTop="10dp" />
+        <include
+            android:id="@+id/loadItemsLayout_recyclerView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            layout="@layout/progress_layout"
+            android:visibility="gone" />
 
     </android.support.v4.widget.SwipeRefreshLayout>
 
