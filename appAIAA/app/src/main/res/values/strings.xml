@@ -3,6 +3,7 @@
     <string name="app_name">appAIAA</string>
     <string name="title_rssfeed">RSS</string>
     <string name="title_calculator">Calculator</string>
+    <string name="nrl_plasma_formulary">NRL Plasma Formulary</string>
     <string name="title_videos">Videos</string>
 
     //Sample Strings
@@ -20,6 +21,14 @@
     <string name="dimensionless">Dimensionless</string>
     <string name="miscellaneous">Miscellaneous</string>
 
+
+    <!--
+    ****************************************************************
+    Calculator Fragment Content
+    ****************************************************************
+    -->
+
+
     //Basic Thruster Physics
     <string name="basic_thruster_physics">Basic Thruster Physics</string>
     <string name="thrust_n">Thrust (N)</string>
@@ -36,6 +45,67 @@
     <string name="acceleration_m_s_2">Acceleration (m/s^2)</string>
     <string name="approx_impulse_m_s">Approx. Impulse (m/s)</string>
     <string name="mass_used_kg">Mass Used (kg)</string>
+
+
+    //Numerical and Algebraic
+    <string name="numerical_and_algebraic">Numerical and Algebraic</string>
+
+
+    //Vector Identities
+    <string name="vector_identities">Vector Identities</string>
+
+
+    //Differential Operators in Curvilinear Coordinates
+    <string name="doicc">Differential Operators in Curvilinear Coordinates</string>
+
+
+    //Dimensions and Units
+    <string name="dimensions_and_units">Dimensions and Units</string>
+
+
+    //International System (SI) Nomenclature
+    <string name="si_nomenclature">International System (SI) Nomenclature</string>
+
+
+    //Metric Prefixes
+    <string name="metric_prefixes">Metric Prefixes</string>
+
+
+    //Physical Constants (SI)
+    <string name="physical_constants_si">Physical Constants (SI)</string>
+
+
+    //Physical Constants (cgs)
+    <string name="physical_constants_cgs">Physical Constants (cgs)</string>
+
+
+    //Formula Conversion
+    <string name="formula_conversion">Formula Conversion</string>
+
+
+    //Maxwell's Equations
+    <string name="maxwells_equations">Maxwell\'s Equations</string>
+
+
+    //Electricity and Magnetism
+    <string name="electricity_and_magnetism">Electricity and Magnetism</string>
+
+
+    //Electromagnetic Frequency/Wavelength Bands
+    <string name="efwb">Electromagnetic Frequency/Wavelength Bands</string>
+
+
+    //AC Circuits
+    <string name="ac_circuits">AC Circuits</string>
+
+
+    //Dimensionless Numbers of Fluid Mechanics
+    <string name="dnofm">Dimensionless Numbers of Fluid Mechanics</string>
+
+
+    //Shocks
+    <string name="shocks">Shocks</string>
+
 
     //Fundamental Plasma Parameters
     <string name="fpp">Fundamental Plasma Parameters</string>
