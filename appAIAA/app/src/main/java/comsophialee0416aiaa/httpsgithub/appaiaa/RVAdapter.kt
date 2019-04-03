@@ -22,7 +22,7 @@ import java.io.InputStream
 import java.net.MalformedURLException
 
 
-class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter(private val links: ArrayList<Article>) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
     var linksToMap: HashMap<String, Int> = hashMapOf()
 
@@ -30,7 +30,7 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int):
             MyViewHolder {
 
-        val itemLayoutView:View =  LayoutInflater.from(parent.context)
+        val itemLayoutView: View = LayoutInflater.from(parent.context)
                 .inflate(R.layout.rssfeed_cards, null)
 
         itemLayoutView.setOnClickListener {
@@ -69,11 +69,11 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
     @SuppressLint("StaticFieldLeak")
     private inner class GetImageLink(val image: ImageView) : AsyncTask<Void, Void, Bitmap>() {
 
-        var title : String = ""
+        var title: String = ""
 
-        override fun doInBackground(vararg params : Void): Bitmap? {
-            var bmp : Bitmap? = null
-            if(null == links[linksToMap[title] as Int].image) {
+        override fun doInBackground(vararg params: Void): Bitmap? {
+            var bmp: Bitmap? = null
+            if (null == links[linksToMap[title] as Int].image) {
                 try {
                     val document = Jsoup.connect(links[linksToMap[title] as Int].link).get()
                     links[linksToMap[title] as Int].image = getActualImage(document?.select("#ctl00_ContentPlaceHolder1_ContentBlock2 font a")?.first()?.attr("href"))
@@ -85,8 +85,8 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
 //                Log.i("greetings", links[linksToMap[title] as Int].image)
 //                holder?.cardImage?.setImageDrawable(loadImageFromWebOperations(links[linksToMap[title] as Int].image))
 //            }
-            if(null != links[linksToMap[title] as Int].image) {
-                val `in` : InputStream?
+            if (null != links[linksToMap[title] as Int].image) {
+                val `in`: InputStream?
                 try {
                     `in` = java.net.URL(links[linksToMap[title] as Int].image).openStream()
                     bmp = BitmapFactory.decodeStream(`in`)
@@ -94,33 +94,32 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
                     e.printStackTrace()
                 }
             }
-            if(bmp != null) {
+            if (bmp != null) {
                 Log.i("bmp", "\n" + title + "\n" + links[linksToMap[title] as Int].image)
             }
             return bmp
         }
 
         override fun onPostExecute(result: Bitmap?) {
-            if(null != result) {
+            if (null != result) {
                 image.setImageBitmap(result)
             }
         }
 
-        fun getActualImage(imageLink : String?) : String? {
-            if(imageLink == null) {
+        fun getActualImage(imageLink: String?): String? {
+            if (imageLink == null) {
                 return null
             }
-            val invalid : Boolean = "/uploadedImages/Industry_News/" == imageLink.substring(0, 30)
-            || "http://archive" == imageLink.substring(0,14)
-            || "https://aerospaceamerica" == imageLink.substring(0,24)
-            || "https://www.space.com" == imageLink.substring(0, 21)
-            || "https://www.orbitalatk.com" == imageLink.substring(0,26)
-            || "https://www.dropbox.com/" == imageLink.substring(0, 24)
+            val invalid: Boolean = "/uploadedImages/Industry_News/" == imageLink.substring(0, 30)
+                    || "http://archive" == imageLink.substring(0, 14)
+                    || "https://aerospaceamerica" == imageLink.substring(0, 24)
+                    || "https://www.space.com" == imageLink.substring(0, 21)
+                    || "https://www.orbitalatk.com" == imageLink.substring(0, 26)
+                    || "https://www.dropbox.com/" == imageLink.substring(0, 24)
 
-            if(invalid) {
+            if (invalid) {
                 return null
-            }
-            else if("https://commons.wikimedia.org" == imageLink.substring(0,29)) {
+            } else if ("https://commons.wikimedia.org" == imageLink.substring(0, 29)) {
                 return Jsoup.connect(imageLink).get()?.select("fullImageLink a")?.attr("href")
             }
             return imageLink

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import java.util.*
 import com.prof.rssparser.Article
 import com.prof.rssparser.Parser
+import kotlinx.android.synthetic.main.fragment_rssfeed.*
 
 
 //1
@@ -21,6 +22,7 @@ class RSSFeedFragment : Fragment() {
             return RSSFeedFragment()
         }
     }
+
     //3
     override fun onCreateView(inflater: LayoutInflater,
                               container: ViewGroup?,
@@ -45,7 +47,7 @@ class RSSFeedFragment : Fragment() {
                 recyclerView.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
 
                 // this is data fro recycler view
-                val adapter:RecyclerView.Adapter<MyAdapter.MyViewHolder> = MyAdapter(list)
+                val adapter: RecyclerView.Adapter<MyAdapter.MyViewHolder> = MyAdapter(list)
                 recyclerView.adapter = adapter
             }
 
@@ -53,7 +55,19 @@ class RSSFeedFragment : Fragment() {
                 //what to do in case of error
             }
         })
+
         return rootView
+    }
+
+    private lateinit var mRunnable: Runnable
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        refresh.setOnRefreshListener {
+            mRunnable = Runnable {
+                //TODO: Create Update Function
+            }
+        }
     }
 
 }
