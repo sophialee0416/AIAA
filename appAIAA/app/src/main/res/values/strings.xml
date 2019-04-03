@@ -1,11 +1,26 @@
 <resources>
+    //Main Strings
     <string name="app_name">appAIAA</string>
     <string name="title_rssfeed">RSS</string>
     <string name="title_calculator">Calculator</string>
     <string name="title_videos">Videos</string>
+
+    //Sample Strings
     <string name="sample_title">Sample title</string>
     <string name="sample_description_of_aiaa_article">Sample description of AIAA article</string>
     <string name="todo">TODO</string>
+
+    //Pictures
+    <string name="eptc_logo">EPTC logo</string>
+
+    //General Strings
+    <string name="frequencies">Frequencies</string>
+    <string name="lengths">Lengths</string>
+    <string name="velocities">Velocities</string>
+    <string name="dimensionless">Dimensionless</string>
+    <string name="miscellaneous">Miscellaneous</string>
+
+    //Basic Thruster Physics
     <string name="basic_thruster_physics">Basic Thruster Physics</string>
     <string name="thrust_n">Thrust (N)</string>
     <string name="isp_s">Isp (s)</string>
@@ -21,5 +36,41 @@
     <string name="acceleration_m_s_2">Acceleration (m/s^2)</string>
     <string name="approx_impulse_m_s">Approx. Impulse (m/s)</string>
     <string name="mass_used_kg">Mass Used (kg)</string>
-    <string name="eptc_logo">EPTC logo</string>
+
+    //Fundamental Plasma Parameters
+    <string name="fpp">Fundamental Plasma Parameters</string>
+    //Frequencies
+    <string name="electron_gyrofrequency">Electron Gyrofrequency</string>
+    <string name="ion_gyrofrequency">Ion Gyrofrequency</string>
+    <string name="electron_plasma_frequency">Electron Plasma Frequency</string>
+    <string name="ion_plasma_frequency">Ion Plasma Frequency</string>
+    <string name="electron_trapping_rate">Electron Trapping Rate</string>
+    <string name="ion_trapping_rate">Ion Trapping Rate</string>
+    <string name="electron_collision_rate">Electron Collision Rate</string>
+    <string name="ion_collision_rate">Ion Collision Rate</string>
+    //Lengths
+    <string name="electron_debroglie_length">Electron DeBroglie Length</string>
+    <string name="classical_distance_of_minimum_approach">Classical Distance of Minimum Approach</string>
+    <string name="electron_gyroradius">Electron Gyroradius</string>
+    <string name="ion_gyroradius">Ion Gyroradius</string>
+    <string name="electron_inertial_length">Electron Inertial Length</string>
+    <string name="ion_inertial_length">Ion Inertial Length</string>
+    <string name="debye_length">Debye Length</string>
+    //Velocities
+    <string name="electron_thermal_velocity">Electron Thermal Velocity</string>
+    <string name="ion_thermal_velocity">Ion Thermal Velocity</string>
+    <string name="ion_sound_velocity">Ion Sound Velocity</string>
+    <string name="alfven_velocity">Alfvén Velocity</string>
+    //Dimensionless
+    <string name="electron_proton_mass_ratio">(Electron/Proton Mass Ratio)<sup>1/2</sup></string>
+    <string name="number_of_particles_in_debye_sphere">Number of Particles in Debye Sphere</string>
+    <string name="alfven_velocity_speed_of_light">Alfvén Velocity/Speed of Light</string>
+    <string name="electron_plasma_gyrofrequency_ratio">Electron Plasma/Gyrofrequency Ratio</string>
+    <string name="ion_plasma_gyrofrequency_ratio">Ion Plasma/Gyrofrequency Ratio</string>
+    <string name="thermal_magnetic_energy_ratio">Thermal/Magnetic Energy Ratio</string>
+    <string name="magnetic_ion_rest_energy_ratio">Magnetic/Ion Rest Energy Ratio</string>
+    //Miscellaneous
+    <string name="bohm_diffusion_coefficient">Bohm Diffusion Coefficient</string>
+    <string name="transverse_spitzer_resistivity">Transverse Spitzer Resistivity</string>
+
 </resources>
