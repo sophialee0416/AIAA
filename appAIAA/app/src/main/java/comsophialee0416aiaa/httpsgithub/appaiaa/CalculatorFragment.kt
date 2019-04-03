@@ -12,6 +12,8 @@ import kotlinx.android.synthetic.main.fragment_calculator.*
 
 class CalculatorFragment : Fragment() {
 
+    lateinit var thrusterButton: Button
+
     companion object {
 
         fun newInstance(): CalculatorFragment {
@@ -19,16 +21,32 @@ class CalculatorFragment : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_calculator, container, false)
+        this.thrusterButton = rootView.findViewById(R.id.thruster_button) as Button
         return rootView
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View,
+                               savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        thrusterButton.setOnClickListener {
+            val thrusterFragment = ThrusterFormula.newInstance()
+            openFragment(thrusterFragment)
+        }
 
+    }
 
+    private fun openFragment(fragment: Fragment) {
+        val fragmentManager = activity!!.supportFragmentManager
+        val fragmentTransaction = fragmentManager.beginTransaction()
+
+        fragmentTransaction.replace(R.id.container, fragment)
+        fragmentTransaction.addToBackStack(null)
+        fragmentTransaction.commit()
     }
 
 }

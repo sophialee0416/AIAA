@@ -7,16 +7,17 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical" >
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-        <RelativeLayout
+        <Button
+            android:id="@+id/thruster_button"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="@string/basic_thruster_physics" />
 
 
-
-
-        </RelativeLayout>
     </LinearLayout>
+
 </ScrollView>
