@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/numerical_and_algebraic_textView"
+            android:id="@+id/textView_numerical_and_algebraic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -24,20 +24,20 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/thruster_button"
+            android:id="@+id/button_gain_in_decibels"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
-            android:text="@string/basic_thruster_physics" />
+            android:text="@string/gain_in_decibels" />
 
         <Button
-            android:id="@+id/fpp_button"
+            android:id="@+id/button_to_within_two"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
-            android:text="@string/fpp" />
+            android:text="@string/to_within_two" />
 
     </LinearLayout>
 

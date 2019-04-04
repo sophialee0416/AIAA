@@ -12,6 +12,7 @@ import android.widget.Button
 class CalculatorFragment : Fragment() {
 
     lateinit var thrusterButton: Button
+    lateinit var numericalAndAlgebraicButton: Button
     lateinit var fppButton: Button
 
     companion object {
@@ -26,17 +27,21 @@ class CalculatorFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_calculator, container, false)
-        this.thrusterButton = rootView.findViewById(R.id.thruster_button) as Button
-        this.fppButton = rootView.findViewById(R.id.fpp_button)
+        this.thrusterButton = rootView.findViewById(R.id.button_thruster) as Button
+        this.numericalAndAlgebraicButton = rootView.findViewById(R.id.button_numerical_and_algebraic) as Button
+        this.fppButton = rootView.findViewById(R.id.button_fpp)
         return rootView
     }
 
-    override fun onViewCreated(view: View,
-                               savedInstanceState: Bundle?) {
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         thrusterButton.setOnClickListener {
             val thrusterFragment = ThrusterFormula.newInstance()
             openFragment(thrusterFragment)
+        }
+        numericalAndAlgebraicButton.setOnClickListener {
+            val numericalAndAlgebraicFragment = NumericalAndAlgebraic.newInstance()
+            openFragment(numericalAndAlgebraicFragment)
         }
         fppButton.setOnClickListener {
             val fppFragment = FundamentalPlasmaParameters.newInstance()

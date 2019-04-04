@@ -21,7 +21,9 @@ class ThrusterFormula : Fragment() {
         }
     }
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    override fun onCreateView(inflater: LayoutInflater,
+                              container: ViewGroup?,
+                              savedInstanceState: Bundle?): View? {
 
         val rootView = inflater.inflate(R.layout.formula_thruster, container, false)
         this.calc = rootView.findViewById(R.id.calculate_button) as Button

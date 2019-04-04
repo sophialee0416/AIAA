@@ -15,6 +15,7 @@
     <string name="eptc_logo">EPTC logo</string>
 
     //General Strings
+    <string name="calculate">Calculate</string>
     <string name="frequencies">Frequencies</string>
     <string name="lengths">Lengths</string>
     <string name="velocities">Velocities</string>
@@ -29,7 +30,8 @@
     -->
 
 
-    //Basic Thruster Physics
+    <!--Basic Thruster Physics-->
+
     <string name="basic_thruster_physics">Basic Thruster Physics</string>
     <string name="thrust_n">Thrust (N)</string>
     <string name="isp_s">Isp (s)</string>
@@ -37,18 +39,25 @@
     <string name="s_c_mass_kg">S/c Mass (kg)</string>
     <string name="propellant_utilization">Propellant Utilization</string>
     <string name="burn_duration_days">Burn Duration (Days)</string>
-    <string name="calculate">Calculate</string>
     <string name="mass_flow_kg_s">Mass Flow (kg/s)</string>
     <string name="mass_flow_g_month">Mass Flow (g/month)</string>
     <string name="anode_efficiency">Anode Efficiency</string>
     <string name="burn_duration_s">Burn Duration (s)</string>
-    <string name="acceleration_m_s_2">Acceleration (m/s^2)</string>
+    <string name="acceleration_m_s_2">Acceleration (m wen/s^2)</string>
     <string name="approx_impulse_m_s">Approx. Impulse (m/s)</string>
     <string name="mass_used_kg">Mass Used (kg)</string>
 
 
-    //Numerical and Algebraic
+
+    <!--Numerical and Algebraic-->
     <string name="numerical_and_algebraic">Numerical and Algebraic</string>
+    //Gain in Decibels
+    <string name="gain_in_decibels">Gain in Decibels of P2 Relative to P1</string>
+    <string name="gain_in_decibels_formula">G = 10log<sub>10</sub>(P<sub>2</sub>/P<sub>1</sub>).</string>
+    <string name="gain">Gain</string>
+    <string name="p2">P<sub>2</sub></string>
+    <string name="p1">P<sub>1</sub></string>
+    <string name="to_within_two">To Within Two Percent</string>
 
 
     //Vector Identities
@@ -142,5 +151,54 @@
     //Miscellaneous
     <string name="bohm_diffusion_coefficient">Bohm Diffusion Coefficient</string>
     <string name="transverse_spitzer_resistivity">Transverse Spitzer Resistivity</string>
+
+
+    //Plasma Dispersion Function
+    <string name="plasma_dispersion_function">Plasma Dispersion Function</string>
+
+
+    //Collisions and Transport
+    <string name="collisions_and_transport">Collisions and Transport</string>
+
+
+    //Approximate Magnitudes in Some Typical Plasmas
+    <string name="apistp">Approximate Magnitudes in Some Typical Plasmas</string>
+
+
+    //Ionospheric Parameters
+    <string name="ionospheric_parameters">Ionospheric Parameters</string>
+
+
+    //Solar Physics Parameters
+    <string name="solar_physics_parameters">Solar Physics Parameters</string>
+
+
+    //Thermonuclear Fusion
+    <string name="thermonuclear_fusion">Thermonuclear Fusion</string>
+
+
+    //Relativistic Electron Beams
+    <string name="relativistic_electron_beams">Relativistic Electron Beams</string>
+
+
+    //Beam Instabilities
+    <string name="beam_instabilities">Beam Instabilities</string>
+
+
+    //Lasers
+    <string name="lasers">Lasers</string>
+
+
+    //Atomic Physics and Radiation
+    <string name="atomic_physics_and_radiation">Atomic Physics and Radiation</string>
+
+
+    //Atomic Spectroscopy
+    <string name="atomic_spectroscopy">Atomic Spectroscopy</string>
+
+
+    //Complex (Dusty) Plasmas
+    <string name="complex_dusty_plasmas">Complex (Dusty) Plasmas</string>
+
 
 </resources>
