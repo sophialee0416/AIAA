@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import kotlinx.android.synthetic.main.list_naa.*
 
 class NumericalAndAlgebraic : Fragment() {
 
+    lateinit var gainInDecibelsButton: Button
 
     companion object {
         fun newInstance(): NumericalAndAlgebraic {
@@ -20,12 +22,16 @@ class NumericalAndAlgebraic : Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.list_naa, container, false)
+        this.gainInDecibelsButton = rootView.findViewById(R.id.button_gain_in_decibels) as Button
         return rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        gainInDecibelsButton.setOnClickListener {
+            val gainInDecibelsFragment = GainInDecibelsFormula.newInstance()
+            openFragment(gainInDecibelsFragment)
+        }
     }
 
     private fun openFragment(fragment: Fragment) {

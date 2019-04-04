@@ -24,6 +24,8 @@ android {
         main {
             res.srcDirs =
                     [
+                            'src/main/res/layouts/formulas/fundamental_plasma_parameters',
+                            'src/main/res/layouts/formulas/numeric_and_algebraic',
                             'src/main/res/layouts/formulas',
                             'src/main/res/layouts/mains',
                             'src/main/res/layouts',

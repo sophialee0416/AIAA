@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/nrl_plasma_formulary_textView"
+            android:id="@+id/textView_nrl_plasma_formulary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -20,17 +20,18 @@
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:text="@string/nrl_plasma_formulary"
+            android:textAlignment="center"
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/thruster_button"
+            android:id="@+id/button_thruster"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:text="@string/basic_thruster_physics" />
 
         <Button
-            android:id="@+id/numerical_and_algebraic_button"
+            android:id="@+id/button_numerical_and_algebraic"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -39,7 +40,7 @@
             android:text="@string/numerical_and_algebraic" />
 
         <Button
-            android:id="@+id/vector_identities_button"
+            android:id="@+id/button_vector_identities"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -48,7 +49,7 @@
             android:text="@string/vector_identities" />
 
         <Button
-            android:id="@+id/doicc_button"
+            android:id="@+id/button_doicc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -57,7 +58,7 @@
             android:text="@string/doicc" />
 
         <Button
-            android:id="@+id/dimensions_and_units_button"
+            android:id="@+id/button_dimensions_and_units"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -66,7 +67,7 @@
             android:text="@string/dimensions_and_units" />
 
         <Button
-            android:id="@+id/si_nomenclature_button"
+            android:id="@+id/button_si_nomenclature"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -75,7 +76,7 @@
             android:text="@string/si_nomenclature" />
 
         <Button
-            android:id="@+id/metric_prefixes_button"
+            android:id="@+id/button_metric_prefixes"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -84,7 +85,7 @@
             android:text="@string/metric_prefixes" />
 
         <Button
-            android:id="@+id/physical_constants_si_button"
+            android:id="@+id/button_physical_constants_si"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -93,7 +94,7 @@
             android:text="@string/physical_constants_si" />
 
         <Button
-            android:id="@+id/physical_constants_cgs_button"
+            android:id="@+id/button_physical_constants_cgs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -102,7 +103,7 @@
             android:text="@string/physical_constants_cgs" />
 
         <Button
-            android:id="@+id/formula_conversion_button"
+            android:id="@+id/button_formula_conversion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -111,7 +112,7 @@
             android:text="@string/formula_conversion" />
 
         <Button
-            android:id="@+id/maxwells_equations_button"
+            android:id="@+id/button_maxwells_equations"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -120,7 +121,7 @@
             android:text="@string/maxwells_equations" />
 
         <Button
-            android:id="@+id/electricity_and_magnetism_button"
+            android:id="@+id/button_electricity_and_magnetism"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -129,7 +130,7 @@
             android:text="@string/electricity_and_magnetism" />
 
         <Button
-            android:id="@+id/efwb_button"
+            android:id="@+id/button_efwb"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -138,7 +139,7 @@
             android:text="@string/efwb" />
 
         <Button
-            android:id="@+id/ac_circuits_button"
+            android:id="@+id/button_ac_circuits"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -147,7 +148,7 @@
             android:text="@string/ac_circuits" />
 
         <Button
-            android:id="@+id/dnofm_button"
+            android:id="@+id/button_dnofm"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -156,7 +157,7 @@
             android:text="@string/dnofm" />
 
         <Button
-            android:id="@+id/shocks_button"
+            android:id="@+id/button_shocks"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -165,13 +166,121 @@
             android:text="@string/shocks" />
 
         <Button
-            android:id="@+id/fpp_button"
+            android:id="@+id/button_fpp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginEnd="10dp"
             android:layout_marginBottom="10dp"
             android:text="@string/fpp" />
+
+        <Button
+            android:id="@+id/plasma_dispersion_function_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/plasma_dispersion_function" />
+
+        <Button
+            android:id="@+id/button_collisions_and_transport"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/collisions_and_transport" />
+
+        <Button
+            android:id="@+id/button_apistp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/apistp" />
+
+        <Button
+            android:id="@+id/button_ionospheric_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/ionospheric_parameters" />
+
+        <Button
+            android:id="@+id/button_solar_physics_parameters"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/solar_physics_parameters" />
+
+        <Button
+            android:id="@+id/button_thermonuclear_fusion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/thermonuclear_fusion" />
+
+        <Button
+            android:id="@+id/button_relativistic_electron_beams"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/relativistic_electron_beams" />
+
+        <Button
+            android:id="@+id/button_beam_instabilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/beam_instabilities" />
+
+        <Button
+            android:id="@+id/button_lasers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/lasers" />
+
+        <Button
+            android:id="@+id/button_atomic_physics_and_radiation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/atomic_physics_and_radiation" />
+
+        <Button
+            android:id="@+id/button_atomic_spectroscopy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/atomic_spectroscopy" />
+
+        <Button
+            android:id="@+id/button_complex_dusty_plasmas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/complex_dusty_plasmas" />
 
     </LinearLayout>
 
