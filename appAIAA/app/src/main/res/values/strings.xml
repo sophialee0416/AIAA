@@ -63,7 +63,13 @@
     <string name="gain">Gain</string>
     <string name="p2">P<sub><small><small><small>2</small></small></small></sub></string>
     <string name="p1">P<sub><small><small><small>1</small></small></small></sub></string>
+    //To Within Two Percent
     <string name="to_within_two">To Within Two Percent</string>
+    <string name="to_within_two_formula">(2\u03C0)<sup><small><small>1/2</small></small></sup> \u2248 2.5;
+        \u03C0<sup><small><small>2</small></small></sup> \u2248 10;
+        e<sup><small><small>3</small></small></sup> \u2248 20;
+        2<sup><small><small>10</small></small></sup> \u2248
+        10<sup><small><small>3</small></small></sup></string>
 
 
     //Vector Identities

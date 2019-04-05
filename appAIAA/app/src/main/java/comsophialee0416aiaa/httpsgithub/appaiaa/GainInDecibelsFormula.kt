@@ -1,7 +1,5 @@
 package comsophialee0416aiaa.httpsgithub.appaiaa
 
-import android.icu.text.NumberFormat
-import android.icu.text.ScientificNumberFormatter
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
@@ -11,7 +9,6 @@ import android.widget.Button
 import kotlinx.android.synthetic.main.gain_in_decibels.*
 import kotlin.math.log10
 
-// cards of formulas, same with videos
 
 class GainInDecibelsFormula : Fragment() {
 
@@ -50,7 +47,6 @@ class GainInDecibelsFormula : Fragment() {
     }
 
     private fun gainInDecibels(p2: Double, p1: Double): Double {
-        val ans:Double = (10*(log10(p2/p1)))
-        return ans
+        return (10*(log10(p2/p1)))
     }
 }
