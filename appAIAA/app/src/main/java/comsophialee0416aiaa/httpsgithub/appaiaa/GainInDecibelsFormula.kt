@@ -15,7 +15,6 @@ class GainInDecibelsFormula : Fragment() {
     lateinit var calc: Button
 
     companion object {
-
         fun newInstance(): GainInDecibelsFormula {
             return GainInDecibelsFormula()
         }
