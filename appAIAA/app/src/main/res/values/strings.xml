@@ -22,12 +22,15 @@
     <string name="dimensionless">Dimensionless</string>
     <string name="miscellaneous">Miscellaneous</string>
 
+    //Units
+    <string name="decibels">dB</string>
+    <string name="hertz">Hz</string>
 
-    <!--
-    ****************************************************************
-    Calculator Fragment Content
-    ****************************************************************
-    -->
+
+
+    <!--*******************************************************************************************
+    ***************************** Pg. 28: Calculator Fragment Content *****************************
+    ********************************************************************************************-->
 
 
     <!--Basic Thruster Physics-->
@@ -49,15 +52,28 @@
 
 
 
-    <!--Numerical and Algebraic-->
+    //Numerical and Algebraic
+
     <string name="numerical_and_algebraic">Numerical and Algebraic</string>
-    //Gain in Decibels
+    <!--Gain in Decibels-->
     <string name="gain_in_decibels">Gain in Decibels of P2 Relative to P1</string>
-    <string name="gain_in_decibels_formula">G = 10log<sub>10</sub>(P<sub>2</sub>/P<sub>1</sub>).</string>
+    <string name="gain_in_decibels_formula">G = 10log<sub><small><small>10</small></small></sub>
+        (P<sub><small><small>2</small></small></sub>
+        /P<sub><small><small>1</small></small></sub>).</string>
     <string name="gain">Gain</string>
-    <string name="p2">P<sub>2</sub></string>
-    <string name="p1">P<sub>1</sub></string>
+    <string name="p2">P<sub><small><small><small>2</small></small></small></sub></string>
+    <string name="p1">P<sub><small><small><small>1</small></small></small></sub></string>
+    <!--To Within Two Percent-->
     <string name="to_within_two">To Within Two Percent</string>
+    <string name="to_within_two_formula">(2\u03C0)<sup><small><small>1/2</small></small></sup> \u2248 2.5;
+        \u03C0<sup><small><small>2</small></small></sup> \u2248 10;
+        e<sup><small><small>3</small></small></sup> \u2248 20;
+        2<sup><small><small>10</small></small></sup> \u2248
+        10<sup><small><small>3</small></small></sup></string>
+    <!--Euler Mascheroni Constant-->
+    <string name="euler_mascheroni_constant">Euler Mascheroni Constant</string>
+    <string name="euler_mascheroni_constant_formula">\u03B3 = 0.57722</string>
+
 
 
     //Vector Identities
@@ -116,10 +132,17 @@
     <string name="shocks">Shocks</string>
 
 
+    <!--****************************************************************************************-->
+
     //Fundamental Plasma Parameters
     <string name="fpp">Fundamental Plasma Parameters</string>
-    //Frequencies
+    <!--Frequencies-->
     <string name="electron_gyrofrequency">Electron Gyrofrequency</string>
+    <string name="electron_gyrofrequency_formula">f<sub><small><small>ce</small></small></sub> =
+        w<sub><small><small>ce</small></small></sub>/2\u03C0 =
+        2.80 \u00D7 10<sup><small><small>6</small></small></sup>B</string>
+
+
     <string name="ion_gyrofrequency">Ion Gyrofrequency</string>
     <string name="electron_plasma_frequency">Electron Plasma Frequency</string>
     <string name="ion_plasma_frequency">Ion Plasma Frequency</string>
@@ -127,7 +150,7 @@
     <string name="ion_trapping_rate">Ion Trapping Rate</string>
     <string name="electron_collision_rate">Electron Collision Rate</string>
     <string name="ion_collision_rate">Ion Collision Rate</string>
-    //Lengths
+    <!--Lengths-->
     <string name="electron_debroglie_length">Electron DeBroglie Length</string>
     <string name="classical_distance_of_minimum_approach">Classical Distance of Minimum Approach</string>
     <string name="electron_gyroradius">Electron Gyroradius</string>
@@ -135,12 +158,12 @@
     <string name="electron_inertial_length">Electron Inertial Length</string>
     <string name="ion_inertial_length">Ion Inertial Length</string>
     <string name="debye_length">Debye Length</string>
-    //Velocities
+    <!--Velocities-->
     <string name="electron_thermal_velocity">Electron Thermal Velocity</string>
     <string name="ion_thermal_velocity">Ion Thermal Velocity</string>
     <string name="ion_sound_velocity">Ion Sound Velocity</string>
     <string name="alfven_velocity">Alfvén Velocity</string>
-    //Dimensionless
+    <!--Dimensionless-->
     <string name="electron_proton_mass_ratio">(Electron/Proton Mass Ratio)<sup>1/2</sup></string>
     <string name="number_of_particles_in_debye_sphere">Number of Particles in Debye Sphere</string>
     <string name="alfven_velocity_speed_of_light">Alfvén Velocity/Speed of Light</string>
@@ -148,9 +171,12 @@
     <string name="ion_plasma_gyrofrequency_ratio">Ion Plasma/Gyrofrequency Ratio</string>
     <string name="thermal_magnetic_energy_ratio">Thermal/Magnetic Energy Ratio</string>
     <string name="magnetic_ion_rest_energy_ratio">Magnetic/Ion Rest Energy Ratio</string>
-    //Miscellaneous
+    <!--Miscellaneous-->
     <string name="bohm_diffusion_coefficient">Bohm Diffusion Coefficient</string>
     <string name="transverse_spitzer_resistivity">Transverse Spitzer Resistivity</string>
+
+
+    <!--****************************************************************************************-->
 
 
     //Plasma Dispersion Function
