@@ -22,6 +22,10 @@
     <string name="dimensionless">Dimensionless</string>
     <string name="miscellaneous">Miscellaneous</string>
 
+    //Units
+    <string name="decibels">dB</string>
+
+
 
     <!--
     ****************************************************************
@@ -53,10 +57,12 @@
     <string name="numerical_and_algebraic">Numerical and Algebraic</string>
     //Gain in Decibels
     <string name="gain_in_decibels">Gain in Decibels of P2 Relative to P1</string>
-    <string name="gain_in_decibels_formula">G = 10log<sub>10</sub>(P<sub>2</sub>/P<sub>1</sub>).</string>
+    <string name="gain_in_decibels_formula">G = 10log<sub><small><small>10</small></small></sub>
+        (P<sub><small><small>2</small></small></sub>
+        /P<sub><small><small>1</small></small></sub>).</string>
     <string name="gain">Gain</string>
-    <string name="p2">P<sub>2</sub></string>
-    <string name="p1">P<sub>1</sub></string>
+    <string name="p2">P<sub><small><small><small>2</small></small></small></sub></string>
+    <string name="p1">P<sub><small><small><small>1</small></small></small></sub></string>
     <string name="to_within_two">To Within Two Percent</string>
 
 

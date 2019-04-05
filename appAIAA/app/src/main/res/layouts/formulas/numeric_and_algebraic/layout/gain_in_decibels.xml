@@ -40,6 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-light"
             android:paddingStart="10dp"
             android:paddingEnd="10dp"
             android:paddingBottom="10dp"
@@ -57,10 +58,10 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
             android:layout_marginTop="30dp"
+            android:paddingBottom="10dp"
             android:text="@string/p2"
             android:textSize="30sp"
             app:layout_constraintEnd_toStartOf="@id/edit_p2"
-            app:layout_constraintStart_toEndOf="@+id/label_gain"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/formula_gain_in_decibels" />
 
@@ -71,6 +72,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="10dp"
             android:inputType="numberDecimal"
+            android:paddingBottom="10dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/label_p2"
             app:layout_constraintTop_toBottomOf="@id/formula_gain_in_decibels" />
@@ -79,27 +81,58 @@
             android:id="@+id/label_p1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:paddingBottom="10dp"
             android:text="@string/p1"
+            android:textSize="30sp"
+            app:layout_constraintEnd_toStartOf="@id/edit_p1"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_p2" />
+            app:layout_constraintTop_toBottomOf="@id/edit_p2" />
+
+        <EditText
+            android:id="@+id/edit_p1"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="10dp"
+            android:inputType="numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_p1"
+            app:layout_constraintTop_toBottomOf="@id/edit_p2" />
 
         <Button
             android:id="@+id/button_calc_gain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:text="@string/calculate"
             app:layout_constraintBottom_toTopOf="@id/label_gain"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/label_p1" />
+            app:layout_constraintTop_toBottomOf="@id/edit_p1" />
 
         <TextView
             android:id="@+id/label_gain"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
             android:text="@string/gain"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toStartOf="@id/label_gain_answer"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/label_p1" />
+            app:layout_constraintTop_toBottomOf="@+id/button_calc_gain"/>
+
+        <TextView
+            android:id="@+id/label_gain_answer"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="sans-serif-light"
+            android:textSize="30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/label_gain"
+            app:layout_constraintTop_toBottomOf="@+id/button_calc_gain" />
 
 
     </android.support.constraint.ConstraintLayout>
