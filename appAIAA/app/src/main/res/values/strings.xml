@@ -1,11 +1,40 @@
 <resources>
+    //Main Strings
     <string name="app_name">appAIAA</string>
     <string name="title_rssfeed">RSS</string>
     <string name="title_calculator">Calculator</string>
+    <string name="nrl_plasma_formulary">NRL Plasma Formulary</string>
     <string name="title_videos">Videos</string>
+
+    //Sample Strings
     <string name="sample_title">Sample title</string>
     <string name="sample_description_of_aiaa_article">Sample description of AIAA article</string>
     <string name="todo">TODO</string>
+
+    //Pictures
+    <string name="eptc_logo">EPTC logo</string>
+
+    //General Strings
+    <string name="calculate">Calculate</string>
+    <string name="frequencies">Frequencies</string>
+    <string name="lengths">Lengths</string>
+    <string name="velocities">Velocities</string>
+    <string name="dimensionless">Dimensionless</string>
+    <string name="miscellaneous">Miscellaneous</string>
+
+    //Units
+    <string name="decibels">dB</string>
+    <string name="hertz">Hz</string>
+
+
+
+    <!--*******************************************************************************************
+    ***************************** Pg. 28: Calculator Fragment Content *****************************
+    ********************************************************************************************-->
+
+
+    <!--Basic Thruster Physics-->
+
     <string name="basic_thruster_physics">Basic Thruster Physics</string>
     <string name="thrust_n">Thrust (N)</string>
     <string name="isp_s">Isp (s)</string>
@@ -13,13 +42,203 @@
     <string name="s_c_mass_kg">S/c Mass (kg)</string>
     <string name="propellant_utilization">Propellant Utilization</string>
     <string name="burn_duration_days">Burn Duration (Days)</string>
-    <string name="calculate">Calculate</string>
     <string name="mass_flow_kg_s">Mass Flow (kg/s)</string>
     <string name="mass_flow_g_month">Mass Flow (g/month)</string>
     <string name="anode_efficiency">Anode Efficiency</string>
     <string name="burn_duration_s">Burn Duration (s)</string>
-    <string name="acceleration_m_s_2">Acceleration (m/s^2)</string>
+    <string name="acceleration_m_s_2">Acceleration (m wen/s^2)</string>
     <string name="approx_impulse_m_s">Approx. Impulse (m/s)</string>
     <string name="mass_used_kg">Mass Used (kg)</string>
-    <string name="eptc_logo">EPTC logo</string>
+
+
+
+    //Numerical and Algebraic
+
+    <string name="numerical_and_algebraic">Numerical and Algebraic</string>
+    <!--Gain in Decibels-->
+    <string name="gain_in_decibels">Gain in Decibels of P2 Relative to P1</string>
+    <string name="gain_in_decibels_formula">G = 10log<sub><small><small>10</small></small></sub>
+        (P<sub><small><small>2</small></small></sub>
+        /P<sub><small><small>1</small></small></sub>).</string>
+    <string name="gain">Gain</string>
+    <string name="p2">P<sub><small><small><small>2</small></small></small></sub></string>
+    <string name="p1">P<sub><small><small><small>1</small></small></small></sub></string>
+    <!--To Within Two Percent-->
+    <string name="to_within_two">To Within Two Percent</string>
+    <string name="to_within_two_formula">(2\u03C0)<sup><small><small>1/2</small></small></sup> \u2248 2.5;
+        \u03C0<sup><small><small>2</small></small></sup> \u2248 10;
+        e<sup><small><small>3</small></small></sup> \u2248 20;
+        2<sup><small><small>10</small></small></sup> \u2248
+        10<sup><small><small>3</small></small></sup></string>
+    <!--Euler Mascheroni Constant-->
+    <string name="euler_mascheroni_constant">Euler Mascheroni Constant</string>
+    <string name="euler_mascheroni_constant_formula">\u03B3 = 0.57722</string>
+
+
+
+    //Vector Identities
+    <string name="vector_identities">Vector Identities</string>
+
+
+    //Differential Operators in Curvilinear Coordinates
+    <string name="doicc">Differential Operators in Curvilinear Coordinates</string>
+
+
+    //Dimensions and Units
+    <string name="dimensions_and_units">Dimensions and Units</string>
+
+
+    //International System (SI) Nomenclature
+    <string name="si_nomenclature">International System (SI) Nomenclature</string>
+
+
+    //Metric Prefixes
+    <string name="metric_prefixes">Metric Prefixes</string>
+
+
+    //Physical Constants (SI)
+    <string name="physical_constants_si">Physical Constants (SI)</string>
+
+
+    //Physical Constants (cgs)
+    <string name="physical_constants_cgs">Physical Constants (cgs)</string>
+
+
+    //Formula Conversion
+    <string name="formula_conversion">Formula Conversion</string>
+
+
+    //Maxwell's Equations
+    <string name="maxwells_equations">Maxwell\'s Equations</string>
+
+
+    //Electricity and Magnetism
+    <string name="electricity_and_magnetism">Electricity and Magnetism</string>
+
+
+    //Electromagnetic Frequency/Wavelength Bands
+    <string name="efwb">Electromagnetic Frequency/Wavelength Bands</string>
+
+
+    //AC Circuits
+    <string name="ac_circuits">AC Circuits</string>
+
+
+    //Dimensionless Numbers of Fluid Mechanics
+    <string name="dnofm">Dimensionless Numbers of Fluid Mechanics</string>
+
+    <!--****************************************************************************************-->
+
+    //Nomenclature
+    <string name="B">B</string>
+
+
+    <!--****************************************************************************************-->
+
+
+    //Shocks
+    <string name="shocks">Shocks</string>
+
+
+    <!--****************************************************************************************-->
+
+    //Fundamental Plasma Parameters
+    <string name="fpp">Fundamental Plasma Parameters</string>
+    <!--Frequencies-->
+    <string name="electron_gyrofrequency">Electron Gyrofrequency</string>
+    <string name="electron_gyrofrequency_formula">f<sub><small><small>ce</small></small></sub> =
+        w<sub><small><small>ce</small></small></sub>/2\u03C0 =
+        2.80 \u00D7 10<sup><small><small>6</small></small></sup>B </string>
+    <string name="wce">w<sub><small><small>ce</small></small></sub></string>
+    <string name="fce">f<sub><small><small>ce</small></small></sub></string>
+
+
+    <string name="electron_angular_gyrofrequency_formula">w<sub><small><small>ce</small></small></sub> =
+        eB/m<sub><small><small>e</small></small></sub>c = 1.76 \u00D7
+        10<sup><small><small>7</small></small></sup>B </string>
+
+    <string name="ion_gyrofrequency">Ion Gyrofrequency</string>
+    <string name="electron_plasma_frequency">Electron Plasma Frequency</string>
+    <string name="ion_plasma_frequency">Ion Plasma Frequency</string>
+    <string name="electron_trapping_rate">Electron Trapping Rate</string>
+    <string name="ion_trapping_rate">Ion Trapping Rate</string>
+    <string name="electron_collision_rate">Electron Collision Rate</string>
+    <string name="ion_collision_rate">Ion Collision Rate</string>
+    <!--Lengths-->
+    <string name="electron_debroglie_length">Electron DeBroglie Length</string>
+    <string name="classical_distance_of_minimum_approach">Classical Distance of Minimum Approach</string>
+    <string name="electron_gyroradius">Electron Gyroradius</string>
+    <string name="ion_gyroradius">Ion Gyroradius</string>
+    <string name="electron_inertial_length">Electron Inertial Length</string>
+    <string name="ion_inertial_length">Ion Inertial Length</string>
+    <string name="debye_length">Debye Length</string>
+    <!--Velocities-->
+    <string name="electron_thermal_velocity">Electron Thermal Velocity</string>
+    <string name="ion_thermal_velocity">Ion Thermal Velocity</string>
+    <string name="ion_sound_velocity">Ion Sound Velocity</string>
+    <string name="alfven_velocity">Alfvén Velocity</string>
+    <!--Dimensionless-->
+    <string name="electron_proton_mass_ratio">(Electron/Proton Mass Ratio)<sup>1/2</sup></string>
+    <string name="number_of_particles_in_debye_sphere">Number of Particles in Debye Sphere</string>
+    <string name="alfven_velocity_speed_of_light">Alfvén Velocity/Speed of Light</string>
+    <string name="electron_plasma_gyrofrequency_ratio">Electron Plasma/Gyrofrequency Ratio</string>
+    <string name="ion_plasma_gyrofrequency_ratio">Ion Plasma/Gyrofrequency Ratio</string>
+    <string name="thermal_magnetic_energy_ratio">Thermal/Magnetic Energy Ratio</string>
+    <string name="magnetic_ion_rest_energy_ratio">Magnetic/Ion Rest Energy Ratio</string>
+    <!--Miscellaneous-->
+    <string name="bohm_diffusion_coefficient">Bohm Diffusion Coefficient</string>
+    <string name="transverse_spitzer_resistivity">Transverse Spitzer Resistivity</string>
+
+
+    <!--****************************************************************************************-->
+
+
+    //Plasma Dispersion Function
+    <string name="plasma_dispersion_function">Plasma Dispersion Function</string>
+
+
+    //Collisions and Transport
+    <string name="collisions_and_transport">Collisions and Transport</string>
+
+
+    //Approximate Magnitudes in Some Typical Plasmas
+    <string name="apistp">Approximate Magnitudes in Some Typical Plasmas</string>
+
+
+    //Ionospheric Parameters
+    <string name="ionospheric_parameters">Ionospheric Parameters</string>
+
+
+    //Solar Physics Parameters
+    <string name="solar_physics_parameters">Solar Physics Parameters</string>
+
+
+    //Thermonuclear Fusion
+    <string name="thermonuclear_fusion">Thermonuclear Fusion</string>
+
+
+    //Relativistic Electron Beams
+    <string name="relativistic_electron_beams">Relativistic Electron Beams</string>
+
+
+    //Beam Instabilities
+    <string name="beam_instabilities">Beam Instabilities</string>
+
+
+    //Lasers
+    <string name="lasers">Lasers</string>
+
+
+    //Atomic Physics and Radiation
+    <string name="atomic_physics_and_radiation">Atomic Physics and Radiation</string>
+
+
+    //Atomic Spectroscopy
+    <string name="atomic_spectroscopy">Atomic Spectroscopy</string>
+
+
+    //Complex (Dusty) Plasmas
+    <string name="complex_dusty_plasmas">Complex (Dusty) Plasmas</string>
+
+
 </resources>

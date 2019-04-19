@@ -106,11 +106,11 @@ class MyAdapter(private val links:ArrayList<Article>): RecyclerView.Adapter<MyAd
                 return null
             }
             val invalid : Boolean = "/uploadedImages/Industry_News/" == imageLink.substring(0, 30)
-            || "http://archive" == imageLink.substring(0,14)
-            || "https://aerospaceamerica" == imageLink.substring(0,24)
-            || "https://www.space.com" == imageLink.substring(0, 21)
-            || "https://www.orbitalatk.com" == imageLink.substring(0,26)
-            || "https://www.dropbox.com/" == imageLink.substring(0, 24)
+                    || "http://archive" == imageLink.substring(0,14)
+                    || "https://aerospaceamerica" == imageLink.substring(0,24)
+                    || "https://www.space.com" == imageLink.substring(0, 21)
+                    || "https://www.orbitalatk.com" == imageLink.substring(0,26)
+                    || "https://www.dropbox.com/" == imageLink.substring(0, 24)
 
             if(invalid) {
                 return null
