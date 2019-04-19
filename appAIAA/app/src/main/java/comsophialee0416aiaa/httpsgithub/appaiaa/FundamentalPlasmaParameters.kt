@@ -9,7 +9,7 @@ import android.widget.Button
 
 class FundamentalPlasmaParameters : Fragment() {
 
-    lateinit var electronG: Button
+    lateinit var electronGyrofrequencyButton: Button
 
     companion object {
         fun newInstance(): FundamentalPlasmaParameters {
@@ -21,15 +21,16 @@ class FundamentalPlasmaParameters : Fragment() {
                               container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
         val rootView = inflater.inflate(R.layout.list_fpp, container, false)
-        this.electronG = rootView.findViewById(R.id.electron_gyrofrequency_button) as Button
+        this.electronGyrofrequencyButton = rootView.findViewById(R.id.button_electron_gyrofrequency) as Button
         return rootView
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-//        electronG.setOnClickListener {
-//
-//        }
+        electronGyrofrequencyButton.setOnClickListener {
+            val electronGyrofrequencyFragment = ElectronGyrofrequencyFormula.newInstance()
+            openFragment(electronGyrofrequencyFragment)
+        }
     }
 
     private fun openFragment(fragment: Fragment) {

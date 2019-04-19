@@ -41,7 +41,7 @@ class GainInDecibelsFormula : Fragment() {
             val gain: Double = gainInDecibels(p2, p1)
 
             //3. output
-            label_gain_answer.text = String.format("%6.3e",gain)
+            label_gain_answer.text = String.format("%6.3e", gain)
         }
     }
 
