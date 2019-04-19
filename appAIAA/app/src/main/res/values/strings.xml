@@ -127,6 +127,14 @@
     //Dimensionless Numbers of Fluid Mechanics
     <string name="dnofm">Dimensionless Numbers of Fluid Mechanics</string>
 
+    <!--****************************************************************************************-->
+
+    //Nomenclature
+    <string name="B">B</string>
+
+
+    <!--****************************************************************************************-->
+
 
     //Shocks
     <string name="shocks">Shocks</string>
@@ -140,8 +148,14 @@
     <string name="electron_gyrofrequency">Electron Gyrofrequency</string>
     <string name="electron_gyrofrequency_formula">f<sub><small><small>ce</small></small></sub> =
         w<sub><small><small>ce</small></small></sub>/2\u03C0 =
-        2.80 \u00D7 10<sup><small><small>6</small></small></sup>B</string>
+        2.80 \u00D7 10<sup><small><small>6</small></small></sup>B </string>
+    <string name="wce">w<sub><small><small>ce</small></small></sub></string>
+    <string name="fce">f<sub><small><small>ce</small></small></sub></string>
 
+
+    <string name="electron_angular_gyrofrequency_formula">w<sub><small><small>ce</small></small></sub> =
+        eB/m<sub><small><small>e</small></small></sub>c = 1.76 \u00D7
+        10<sup><small><small>7</small></small></sup>B </string>
 
     <string name="ion_gyrofrequency">Ion Gyrofrequency</string>
     <string name="electron_plasma_frequency">Electron Plasma Frequency</string>

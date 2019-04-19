@@ -49,13 +49,13 @@ class ThrusterFormula : Fragment() {
             val impulse: Double = approxImpulse(thrust, burnSec)
             val massuse: Double = massUsed(kg, burnSec)
 
-            flowkg_value.text = kg.toString()
-            flowg_value.text = g.toString()
-            anode_value.text = anode.toString()
-            burnsec_value.text = burnSec.toString()
-            acceleration_value.text = accelerate.toString()
-            impulse_value.text = impulse.toString()
-            massused_value.text = massuse.toString()
+            flowkg_value.text = String.format("%6.3e", kg)
+            flowg_value.text = String.format("%6.3e", g)
+            anode_value.text = String.format("%6.3e", anode)
+            burnsec_value.text = String.format("%6.3e", burnSec)
+            acceleration_value.text = String.format("%6.3e", accelerate)
+            impulse_value.text = String.format("%6.3e", impulse)
+            massused_value.text = String.format("%6.3e", massuse)
         }
     }
 

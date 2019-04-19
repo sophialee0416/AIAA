@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/frequencies_textView"
+            android:id="@+id/textView_frequencies"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -23,7 +23,7 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/electron_gyrofrequency_button"
+            android:id="@+id/button_electron_gyrofrequency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -32,7 +32,7 @@
             android:text="@string/electron_gyrofrequency" />
 
         <Button
-            android:id="@+id/ion_gyrofrequency_button"
+            android:id="@+id/button_ion_gyrofrequency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -41,7 +41,7 @@
             android:text="@string/ion_gyrofrequency" />
 
         <Button
-            android:id="@+id/electron_plasma_frequency_button"
+            android:id="@+id/button_electron_plasma_frequency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -50,7 +50,7 @@
             android:text="@string/electron_plasma_frequency" />
 
         <Button
-            android:id="@+id/ion_plasma_frequency_button"
+            android:id="@+id/button_ion_plasma_frequency"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -59,7 +59,7 @@
             android:text="@string/ion_plasma_frequency" />
 
         <Button
-            android:id="@+id/electron_trapping_rate_button"
+            android:id="@+id/button_electron_trapping_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -68,7 +68,7 @@
             android:text="@string/electron_trapping_rate" />
 
         <Button
-            android:id="@+id/ion_trapping_rate_button"
+            android:id="@+id/button_ion_trapping_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -77,7 +77,7 @@
             android:text="@string/ion_trapping_rate" />
 
         <Button
-            android:id="@+id/electron_collision_rate_button"
+            android:id="@+id/button_electron_collision_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -86,7 +86,7 @@
             android:text="@string/electron_collision_rate" />
 
         <Button
-            android:id="@+id/ion_collision_rate_button"
+            android:id="@+id/button_ion_collision_rate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -95,7 +95,7 @@
             android:text="@string/ion_collision_rate" />
 
         <TextView
-            android:id="@+id/lengths_textView"
+            android:id="@+id/textView_lengths"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -106,7 +106,7 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/electron_debroglie_length_button"
+            android:id="@+id/button_electron_debroglie_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -115,7 +115,7 @@
             android:text="@string/electron_debroglie_length" />
 
         <Button
-            android:id="@+id/classical_distance_of_minimum_approach_button"
+            android:id="@+id/button_classical_distance_of_minimum_approach"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -124,7 +124,7 @@
             android:text="@string/classical_distance_of_minimum_approach" />
 
         <Button
-            android:id="@+id/electron_gyroradius_button"
+            android:id="@+id/button_electron_gyroradius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -133,7 +133,7 @@
             android:text="@string/electron_gyroradius" />
 
         <Button
-            android:id="@+id/ion_gyroradius_button"
+            android:id="@+id/button_ion_gyroradius"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -142,7 +142,7 @@
             android:text="@string/ion_gyroradius" />
 
         <Button
-            android:id="@+id/electron_inertial_length_button"
+            android:id="@+id/button_electron_inertial_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -151,7 +151,7 @@
             android:text="@string/electron_inertial_length" />
 
         <Button
-            android:id="@+id/ion_inertial_length_button"
+            android:id="@+id/button_ion_inertial_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -160,7 +160,7 @@
             android:text="@string/ion_inertial_length" />
 
         <Button
-            android:id="@+id/debye_length_button"
+            android:id="@+id/button_debye_length"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -169,7 +169,7 @@
             android:text="@string/debye_length" />
 
         <TextView
-            android:id="@+id/velocities_textView"
+            android:id="@+id/textView_velocities"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -180,7 +180,7 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/electron_thermal_velocity_button"
+            android:id="@+id/button_electron_thermal_velocity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -189,7 +189,7 @@
             android:text="@string/electron_thermal_velocity" />
 
         <Button
-            android:id="@+id/ion_thermal_velocity_button"
+            android:id="@+id/button_ion_thermal_velocity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -198,7 +198,7 @@
             android:text="@string/ion_thermal_velocity" />
 
         <Button
-            android:id="@+id/ion_sound_velocity_button"
+            android:id="@+id/button_ion_sound_velocity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -207,7 +207,7 @@
             android:text="@string/ion_sound_velocity" />
 
         <Button
-            android:id="@+id/alfven_velocity_button"
+            android:id="@+id/button_alfven_velocity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -216,7 +216,7 @@
             android:text="@string/alfven_velocity" />
 
         <TextView
-            android:id="@+id/dimensionless_textView"
+            android:id="@+id/textView_dimensionless"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -227,7 +227,7 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/electron_proton_mass_ratio_button"
+            android:id="@+id/button_electron_proton_mass_ratio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -236,7 +236,7 @@
             android:text="@string/electron_proton_mass_ratio" />
 
         <Button
-            android:id="@+id/number_of_particles_in_debye_sphere_button"
+            android:id="@+id/button_number_of_particles_in_debye_sphere"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -245,7 +245,7 @@
             android:text="@string/number_of_particles_in_debye_sphere" />
 
         <Button
-            android:id="@+id/alfven_velocity_speed_of_light_button"
+            android:id="@+id/button_alfven_velocity_speed_of_light"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -254,7 +254,7 @@
             android:text="@string/alfven_velocity_speed_of_light" />
 
         <Button
-            android:id="@+id/electron_plasma_gyrofrequency_ratio_button"
+            android:id="@+id/button_electron_plasma_gyrofrequency_ratio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -263,7 +263,7 @@
             android:text="@string/electron_plasma_gyrofrequency_ratio" />
 
         <Button
-            android:id="@+id/ion_plasma_gyrofrequency_ratio_button"
+            android:id="@+id/button_ion_plasma_gyrofrequency_ratio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -272,7 +272,7 @@
             android:text="@string/ion_plasma_gyrofrequency_ratio" />
 
         <Button
-            android:id="@+id/thermal_magnetic_energy_ratio_button"
+            android:id="@+id/button_thermal_magnetic_energy_ratio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -281,7 +281,7 @@
             android:text="@string/thermal_magnetic_energy_ratio" />
 
         <Button
-            android:id="@+id/magnetic_ion_rest_energy_ratio_button"
+            android:id="@+id/button_magnetic_ion_rest_energy_ratio"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -290,7 +290,7 @@
             android:text="@string/magnetic_ion_rest_energy_ratio" />
 
         <TextView
-            android:id="@+id/miscellaneous_textView"
+            android:id="@+id/textView_miscellaneous"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
@@ -301,7 +301,7 @@
             android:textSize="30sp" />
 
         <Button
-            android:id="@+id/bohm_diffusion_coefficient_button"
+            android:id="@+id/button_bohm_diffusion_coefficient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -310,7 +310,7 @@
             android:text="@string/bohm_diffusion_coefficient" />
 
         <Button
-            android:id="@+id/transverse_spitzer_resistivity_button"
+            android:id="@+id/button_transverse_spitzer_resistivity"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
