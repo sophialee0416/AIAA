@@ -2,6 +2,7 @@ package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -32,6 +33,7 @@ class NumericalAndAlgebraic : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        (activity as AppCompatActivity).supportActionBar?.title = "Numerical and Algebraic"
         gainInDecibelsButton.setOnClickListener {
             val gainInDecibelsFragment = GainInDecibelsFormula.newInstance()
             openFragment(gainInDecibelsFragment)

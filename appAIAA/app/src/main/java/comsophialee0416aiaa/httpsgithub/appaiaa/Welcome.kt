@@ -9,6 +9,7 @@ class Welcome : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        supportActionBar?.hide()
         setContentView(R.layout.activity_welcome)
         val background = object : Thread() {
             override fun run() {

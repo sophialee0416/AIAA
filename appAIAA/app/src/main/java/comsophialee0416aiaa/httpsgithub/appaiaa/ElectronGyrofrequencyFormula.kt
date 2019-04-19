@@ -2,6 +2,7 @@ package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -28,7 +29,7 @@ class ElectronGyrofrequencyFormula : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        (activity as AppCompatActivity).supportActionBar?.title = "Electron Gyrofrequency Formula"
         calc.setOnClickListener {
             val wce: String = edit_wce.text.toString()
             val b: String = edit_B.text.toString()

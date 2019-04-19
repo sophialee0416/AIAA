@@ -2,6 +2,7 @@ package comsophialee0416aiaa.httpsgithub.appaiaa
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,7 +32,7 @@ class GainInDecibelsFormula : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        (activity as AppCompatActivity).supportActionBar?.title = "Gain in Decibels Formula"
         calc.setOnClickListener {
             //1. declare variables
             val p2: Double = edit_p2.text.toString().toDouble()

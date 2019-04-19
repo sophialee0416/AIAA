@@ -9,6 +9,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import kotlinx.android.synthetic.main.fragment_videos.*
+import android.support.v7.app.AppCompatActivity
+
 
 //1
 class VideosFragment : Fragment() {
@@ -34,7 +36,7 @@ class VideosFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        (activity as AppCompatActivity).supportActionBar?.title = "Videos"
         go_Button.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/watch?v=ckOJChcFP2g"))
             startActivity(i)

@@ -3,6 +3,7 @@ package comsophialee0416aiaa.httpsgithub.appaiaa
 import android.os.Bundle
 import android.os.Handler
 import android.support.v4.app.Fragment
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
@@ -46,6 +47,7 @@ class RSSFeedFragment : Fragment() {
                               savedInstanceState: Bundle?): View? {
 
         val rootView = inflater.inflate(R.layout.fragment_rssfeed, container, false)
+        (activity as AppCompatActivity).supportActionBar?.title = "AIAA RSS Feed"
         //1. Get a reference to recyclerView
         recyclerView = rootView.findViewById(R.id.recycler_rssfeed) as RecyclerView
 
